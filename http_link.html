@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirect</title>
+</head>
+<body>
+    <script>
+        // 获取 URL 参数
+        const urlParams = new URLSearchParams(window.location.search);
+        const target = urlParams.get('target');
+
+        // 跳转到自定义协议链接
+        if (target) {
+            window.location.href = target;
+        } else {
+            document.body.innerHTML = '<p>Invalid target</p>';
+        }
+    </script>
+</body>
+</html>
